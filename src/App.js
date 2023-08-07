@@ -1,4 +1,4 @@
-import { Container, Button, Row, Col } from "react-bootstrap";
+import { Button } from "react-bootstrap";
 import { useReducer } from "react";
 import "./App.css";
 
@@ -192,193 +192,175 @@ function App() {
 
   return (
     <div className="App">
-      <div className="App-header">
-        <Container>
-          <div id="displayMemory">{state.memory}</div>
-          <div id="display">{state.view}</div>
-          <Row>
-            <Col>
-              <Button
-                variant="danger"
-                id="clear"
-                onClick={() => {
-                  reset();
-                }}
-              >
-                AC
-              </Button>
-              <Button
-                variant="secondary"
-                id="divide"
-                value="/"
-                onClick={(event) => {
-                  calcul(event);
-                }}
-              >
-                /
-              </Button>
-              <Button
-                variant="secondary"
-                id="multiply"
-                value="*"
-                onClick={(event) => {
-                  calcul(event);
-                }}
-              >
-                x
-              </Button>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Button
-                variant="secondary"
-                id="seven"
-                value="7"
-                onClick={(event) => {
-                  numbers(event);
-                }}
-              >
-                7
-              </Button>
-              <Button
-                variant="secondary"
-                id="eight"
-                value="8"
-                onClick={(event) => {
-                  numbers(event);
-                }}
-              >
-                8
-              </Button>
-              <Button
-                variant="secondary"
-                id="nine"
-                value="9"
-                onClick={(event) => {
-                  numbers(event);
-                }}
-              >
-                9
-              </Button>
-              <Button
-                variant="secondary"
-                id="subtract"
-                value="-"
-                onClick={(event) => {
-                  calcul(event);
-                }}
-              >
-                -
-              </Button>
-            </Col>
-          </Row>
+      <div className="App-calc">
+        <div id="displayMemory">{state.memory}</div>
+        <div id="display">{state.view}</div>
+        <div>
+        <Button
+          variant="danger"
+          id="clear"
+          onClick={() => {
+            reset();
+          }}
+        >
+          AC
+        </Button>
+        <Button
+          variant="secondary"
+          id="divide"
+          value="/"
+          onClick={(event) => {
+            calcul(event);
+          }}
+        >
+          /
+        </Button>
+        <Button
+          variant="secondary"
+          id="multiply"
+          value="*"
+          onClick={(event) => {
+            calcul(event);
+          }}
+        >
+          x
+        </Button>
+        <Button
+          variant="secondary"
+          id="seven"
+          value="7"
+          onClick={(event) => {
+            numbers(event);
+          }}
+        >
+          7
+        </Button>
+        <Button
+          variant="secondary"
+          id="eight"
+          value="8"
+          onClick={(event) => {
+            numbers(event);
+          }}
+        >
+          8
+        </Button>
+        <Button
+          variant="secondary"
+          id="nine"
+          value="9"
+          onClick={(event) => {
+            numbers(event);
+          }}
+        >
+          9
+        </Button>
+        <Button
+          variant="secondary"
+          id="subtract"
+          value="-"
+          onClick={(event) => {
+            calcul(event);
+          }}
+        >
+          -
+        </Button>
+        <Button
+          variant="secondary"
+          id="four"
+          value="4"
+          onClick={(event) => {
+            numbers(event);
+          }}
+        >
+          4
+        </Button>
+        <Button
+          variant="secondary"
+          id="five"
+          value="5"
+          onClick={(event) => {
+            numbers(event);
+          }}
+        >
+          5
+        </Button>
+        <Button
+          variant="secondary"
+          id="six"
+          value="6"
+          onClick={(event) => {
+            numbers(event);
+          }}
+        >
+          6
+        </Button>
+        <Button
+          variant="secondary"
+          id="add"
+          value="+"
+          onClick={(event) => {
+            calcul(event);
+          }}
+        >
+          +
+        </Button>
 
-          <Row>
-            <Col>
-              <Button
-                variant="secondary"
-                id="four"
-                value="4"
-                onClick={(event) => {
-                  numbers(event);
-                }}
-              >
-                4
-              </Button>
-              <Button
-                variant="secondary"
-                id="five"
-                value="5"
-                onClick={(event) => {
-                  numbers(event);
-                }}
-              >
-                5
-              </Button>
-              <Button
-                variant="secondary"
-                id="six"
-                value="6"
-                onClick={(event) => {
-                  numbers(event);
-                }}
-              >
-                6
-              </Button>
-              <Button
-                variant="secondary"
-                id="add"
-                value="+"
-                onClick={(event) => {
-                  calcul(event);
-                }}
-              >
-                +
-              </Button>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Button
-                variant="secondary"
-                id="one"
-                value="1"
-                onClick={(event) => {
-                  numbers(event);
-                }}
-              >
-                1
-              </Button>
-              <Button
-                variant="secondary"
-                id="two"
-                value="2"
-                onClick={(event) => {
-                  numbers(event);
-                }}
-              >
-                2
-              </Button>
-              <Button
-                variant="secondary"
-                id="three"
-                value="3"
-                onClick={(event) => {
-                  numbers(event);
-                }}
-              >
-                3
-              </Button>
-              <Button
-                variant="secondary"
-                id="equals"
-                onClick={() => {
-                  result();
-                }}
-              >
-                =
-              </Button>
-            </Col>
-          </Row>
-          <Row>
-            <Col>
-              <Button
-                variant="secondary"
-                id="zero"
-                value="0"
-                onClick={(event) => {
-                  numbers(event);
-                }}
-              >
-                0
-              </Button>
-              <Button variant="secondary" id="decimal" value="." onClick={dot}>
-                .
-              </Button>
-            </Col>
-          </Row>
-        </Container>
+        <Button
+          variant="secondary"
+          id="one"
+          value="1"
+          onClick={(event) => {
+            numbers(event);
+          }}
+        >
+          1
+        </Button>
+        <Button
+          variant="secondary"
+          id="two"
+          value="2"
+          onClick={(event) => {
+            numbers(event);
+          }}
+        >
+          2
+        </Button>
+        <Button
+          variant="secondary"
+          id="three"
+          value="3"
+          onClick={(event) => {
+            numbers(event);
+          }}
+        >
+          3
+        </Button>
+        
+
+        <Button
+          variant="secondary"
+          id="zero"
+          value="0"
+          onClick={(event) => {
+            numbers(event);
+          }}
+        >
+          0
+        </Button>
+        <Button variant="secondary" id="decimal" value="." onClick={dot}>
+          .
+        </Button>
+        <Button
+          variant="secondary"
+          id="equals"
+          onClick={() => {
+            result();
+          }}
+        >
+          =
+        </Button>
+        </div>
       </div>
     </div>
   );
